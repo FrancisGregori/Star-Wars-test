@@ -1,0 +1,89 @@
+{
+  "scripts": {
+    "start": "http-server -p $PORT",
+    "dev": "node server.js",
+    "test": "jest --coverage",
+    "test:watch": "yarn test -- --watch",
+    "lint": "standard --parser babel-eslint --verbose | snazzy",
+    "lint:watch": "gulp",
+    "lint:fix": "standard --fix",
+    "build": "cross-env NODE_ENV=production BABEL_ENV=production webpack --progress --config webpack/prod.config -p",
+    "build:analyzer": "cross-env ANALYZER=true yarn build",
+    "storybook": "start-storybook -p 6006 -c storybook",
+    "storybook:build": "cross-env NODE_ENV=production BABEL_ENV=production build-storybook -c storybook",
+    "update-packages": "node scripts/update.js",
+    "build-css": "node-sass-chokidar --include-path ./src/assets/css/source/ --include-path ./node_modules src/assets/css/source/ -o src/assets/css",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src/assets/css/source/ --include-path ./node_modules src/assets/css/source/ -o src/assets/css/ --watch --recursive"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^.+\\.css$": "<rootDir>/config/CSSStub.js"
+    }
+  },
+  "standard": {
+    "globals": [
+      "it",
+      "expect"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.2.8",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
+    "clean-webpack-plugin": "^0.1.16",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "eslint-plugin-import": "^2.14.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^0.11.2",
+    "gulp": "^3.9.1",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.1.0",
+    "react-hot-loader": "3.0.0",
+    "react-test-renderer": "^16.4.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3",
+    "standard-loader": "^6.0.1",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.6.0",
+    "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-dashboard": "^1.0.0-5",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-runtime": "^6.26.0",
+    "file-exists": "^5.0.1",
+    "fs": "^0.0.1-security",
+    "history": "^4.7.2",
+    "http-server": "^0.11.1",
+    "jquery": "^3.3.1",
+    "jwt-decode": "^2.2.0",
+    "moment": "^2.22.2",
+    "node-sass-chokidar": "^1.3.4",
+    "preact": "^8.2.5",
+    "preact-compat": "^3.17.0",
+    "prop-types": "^15.5.10",
+    "react": "^16.4.1",
+    "react-color": "^2.14.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^6.0.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "react-select": "^2.1.2",
+    "react-transition-group": "^2.5.0",
+    "reducers": "^3.0.0-alpha",
+    "redux": "^4.0.1",
+    "redux-multi": "^0.1.12",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0"
+  }
+}
