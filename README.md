@@ -1,5 +1,8 @@
 # Documentação
 
+## Exemplo rodando
+http://starwars.francisgregori.com.br/
+
 ## Rodar localmente
 - `yarn` Instala as dependências 
 - `yarn dev` Roda a aplicação localmente
