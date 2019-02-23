@@ -1,0 +1,16 @@
+#main-header {
+  background: $theme-dark-color;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-bottom: 2px solid $theme-base-color;
+  text-align: center;
+  .logo {
+    margin: auto;
+    padding: 30px 15px;
+    img {
+      max-height: 100px;
+      max-width: 100%;
+    }
+  }
+}

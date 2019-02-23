@@ -1,0 +1,17 @@
+$baseDir: "../";
+$theme-font-family: 'Roboto', sans-serif;
+$theme-font-starwars: 'STARWARS', sans-serif;
+$theme-base-color: #edec51;
+$theme-dark-color: #151515;
+
+$theme-transition: all .2s linear;
+
+/*BREAKPOINTS*/
+$lg: 1200px;
+$lg-down: 1199px;
+$md: 992px;
+$md-down: 991px;
+$sm: 768px;
+$sm-down: 767px;
+$xs: 576px;
+$xs-down: 575px;

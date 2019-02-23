@@ -1,0 +1,16 @@
+/* VARIABLES */
+@import 'theme-variables';
+
+/* COMMON INCLUDES*/
+@import 'custom-mixins-and-functions';
+@import './common/normalize';
+@import './common/theme-fonts';
+@import './common/general-styles';
+@import './common/header';
+@import './common/footer';
+
+/* PAGES */
+@import './pages/homepage';
+@import './pages/single';
+
+

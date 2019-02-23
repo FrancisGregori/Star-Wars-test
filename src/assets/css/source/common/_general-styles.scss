@@ -1,0 +1,73 @@
+body {
+  overflow-x: hidden;
+  height: 100%;
+  background: $theme-dark-color;
+  font-family: $theme-font-family;
+  &:before, &:after {
+    content: '';
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background: url('#{$baseDir}images/bg-stars-left.jpg') repeat-y top left;
+    z-index: 1;
+  }
+  &:after {
+    left: auto;
+    right: 0;
+    background: url('#{$baseDir}images/bg-stars-right.jpg') repeat-y top right;
+  }
+  > div {
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    .app {
+      min-height: 100vh;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .not-found-page {
+    text-align: center;
+    padding: 100px 0;
+    h1 {
+      color: #999;
+      font-family: $theme-font-starwars;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 50px;
+      font-size: 28px;
+    }
+    img {
+      max-width: 800px;
+    }
+  }
+
+  &.single-page {
+    #main-header, #main-footer {
+      display: none;
+    }
+  }
+
+  /*LOADER FRAMES*/
+  @keyframes load8 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+}
