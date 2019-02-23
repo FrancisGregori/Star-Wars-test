@@ -10,14 +10,14 @@ http://starwars.francisgregori.com.br/
 
 ## Estrutura do projeto
 - `src`
-    - `assets`  (contem todos os assets do projeto)
-    - `common` (contem o template.html e um arquivo responsável por todas as dependencias do projeto(css e js))
-    - `components` (contem componentes utilizados no projeto como header e footer)
-    - `redux-flow` (contem as configurações do redux, reducers e action creators)
-    - `screens` (contem os arquivos de 'screen' do projeto)
-    - `utils` (contem arquivos com funções que são utilizadas em diversos lugares do projeto)
+    - `assets`  (contém todos os assets do projeto)
+    - `common` (contém o template.html e um arquivo responsável por todas as dependencias do projeto(css e js))
+    - `components` (contém componentes utilizados no projeto como header e footer)
+    - `redux-flow` (contém as configurações do redux, reducers e action creators)
+    - `screens` (contém os arquivos de 'screen' do projeto)
+    - `utils` (contém arquivos com funções que são utilizadas em diversos lugares do projeto)
     - `storybook` (responsável por armazenar os stories dos components)
-    - `webpack` (contem todas as configurações do Webpack)
+    - `webpack` (contém todas as configurações do Webpack)
 
 ## Scripts
 - `yarn dev (or npm run dev)`: Starts the application on development mode
@@ -33,7 +33,7 @@ http://starwars.francisgregori.com.br/
 - `yarn watch-css`: Script to watch the SCSS changes and update the CSS styles on `yarn dev`
 
 
-## Creditos
+## Créditos
 A estrutura base do projeto foi feita utilizando o [Workflow ReactJS](https://github.com/fdaciuk/workflow-reactjs) do [@fdaciuk](https://github.com/fdaciuk).
 
 [swapi.co](https://swapi.co/) - API utilizada para pegar os dados dos filmes
